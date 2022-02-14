@@ -6,7 +6,7 @@
 /*   By: drobert- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 11:32:31 by drobert-          #+#    #+#             */
-/*   Updated: 2022/02/14 15:05:51 by drobert-         ###   ########.fr       */
+/*   Updated: 2022/02/14 15:36:09 by drobert-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,6 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
+void	*ft_memcpy(void *dst, const void *src, size_t dstsize);
 
 #endif
