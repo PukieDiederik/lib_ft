@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: drobert- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/14 11:32:31 by drobert-          #+#    #+#             */
-/*   Updated: 2022/02/14 13:43:54 by drobert-         ###   ########.fr       */
+/*   Created: 2022/02/14 13:14:15 by drobert-          #+#    #+#             */
+/*   Updated: 2022/02/14 13:43:16 by drobert-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-//required for size_t
-# include <stddef.h>
+size_t	ft_strlcpy(char *dst, const char *src, size_t dst_size)
+{
+	int	n;
+	int	src_len;
 
-int		ft_strlen(const char *str);
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-int		ft_isalnum(int c);
-int		ft_toupper(int c);
-int		ft_tolower(int c);
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
-
-#endif
+	n = -1;
+	src_len = ft_strlen(src);
+	if (dst_size == 0)
+		return (src_len);
+	while (*src && ++n < dst_size - 1)
+		*dst++ = *src++;
+	dst = 0;
+	return (src_len);
+}
