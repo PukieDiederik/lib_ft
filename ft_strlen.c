@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: drobert- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/14 11:32:31 by drobert-          #+#    #+#             */
-/*   Updated: 2022/02/14 12:00:58 by drobert-         ###   ########.fr       */
+/*   Created: 2022/02/14 11:41:56 by drobert-          #+#    #+#             */
+/*   Updated: 2022/02/14 11:46:53 by drobert-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+int	ft_strlen(const char *str)
+{
+	int	c;
 
-int	ft_strlen(const char *str);
-
-#endif
+	c = 0;
+	while (*str++)
+		c++;
+	return (c);
+}
