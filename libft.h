@@ -6,7 +6,7 @@
 /*   By: drobert- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 11:32:31 by drobert-          #+#    #+#             */
-/*   Updated: 2022/02/15 11:17:43 by drobert-         ###   ########.fr       */
+/*   Updated: 2022/02/15 11:23:58 by drobert-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,6 @@ void	*ft_memset(void *dst, int c, size_t dstsize);
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
 char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
 
 #endif
