@@ -6,14 +6,14 @@
 #    By: drobert- <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/16 11:40:26 by drobert-          #+#    #+#              #
-#    Updated: 2022/02/16 13:02:01 by drobert-         ###   ########.fr        #
+#    Updated: 2022/02/16 15:23:45 by drobert-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 ## VARIABLES
 
 # PROGRAMS
-CC = gcc
+CC = cc
 
 CFLAGS = -Wall -Wextra -Werror
 
@@ -43,6 +43,9 @@ SRCS = ft_atoi.c \
 	   ft_strrchr.c \
 	   ft_tolower.c \
 	   ft_toupper.c \
+	   \
+	   ft_calloc.c \
+	   ft_strdup.c \
 
 OBJS = $(SRCS:.c=.o)
 
