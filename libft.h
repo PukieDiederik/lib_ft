@@ -6,7 +6,7 @@
 /*   By: drobert- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 11:32:31 by drobert-          #+#    #+#             */
-/*   Updated: 2022/02/15 16:41:26 by drobert-         ###   ########.fr       */
+/*   Updated: 2022/02/16 11:02:39 by drobert-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t dstsize);
 void	*ft_memset(void *dst, int c, size_t dstsize);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_memchr(const void *s, int c, size_t len);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
 char	*ft_strchr(const char *s, int c);
