@@ -6,7 +6,7 @@
 #    By: drobert- <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/16 11:40:26 by drobert-          #+#    #+#              #
-#    Updated: 2022/02/17 10:58:19 by drobert-         ###   ########.fr        #
+#    Updated: 2022/02/17 15:12:37 by drobert-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,8 +50,8 @@ SRCS =		ft_atoi.c \
 			ft_substr.c \
 			ft_strjoin.c \
 			ft_strtrim.c \
-#			ft_split.c \
-			ft_itoa.c \
+			ft_split.c \
+#			ft_itoa.c \
 			ft_strmapi.c \
 			ft_putchar_fd.c \
 			ft_putstr_fd.c \
@@ -64,18 +64,19 @@ OBJS =		$(SRCS:.c=.o)
 NAME =		libft.a
 
 .c.o:
-	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
+	@$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 	
 # FUNCTIONS
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(AR) $(NAME) $(OBJS)
+	@$(AR) $(NAME) $(OBJS)
+	@echo "\033[32mLibrary Created: $(NAME)"
 
 clean:
-	$(RM) $(OBJS)
+	@$(RM) $(OBJS)
 
 fclean: clean
-	$(RM) $(NAME)
+	@$(RM) $(NAME)
 
 re: fclean all
