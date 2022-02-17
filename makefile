@@ -6,7 +6,7 @@
 #    By: drobert- <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/16 11:40:26 by drobert-          #+#    #+#              #
-#    Updated: 2022/02/17 10:40:45 by drobert-         ###   ########.fr        #
+#    Updated: 2022/02/17 10:58:19 by drobert-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,8 +49,8 @@ SRCS =		ft_atoi.c \
 			\
 			ft_substr.c \
 			ft_strjoin.c \
-#			ft_strtrim.c \
-			ft_split.c \
+			ft_strtrim.c \
+#			ft_split.c \
 			ft_itoa.c \
 			ft_strmapi.c \
 			ft_putchar_fd.c \
