@@ -6,7 +6,7 @@
 /*   By: drobert- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 11:32:31 by drobert-          #+#    #+#             */
-/*   Updated: 2022/02/16 17:26:05 by drobert-         ###   ########.fr       */
+/*   Updated: 2022/02/17 23:07:17 by drobert-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 //required for size_t
 # include <stddef.h>
 # include <stdlib.h>
+# include <unistd.h>
 
 size_t	ft_strlen(const char *str);
 int		ft_isalpha(int c);
