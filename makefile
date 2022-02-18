@@ -6,7 +6,7 @@
 #    By: drobert- <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/16 11:40:26 by drobert-          #+#    #+#              #
-#    Updated: 2022/02/18 16:35:42 by drobert-         ###   ########.fr        #
+#    Updated: 2022/02/18 17:26:57 by drobert-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -85,7 +85,7 @@ SRCS =		ft_atoi.c \
 			ft_putendl_fd.c \
 			ft_putnbr_fd.c
 
-BONUS =	#	ft_lstnew_bonus.c \
+BONUS =		ft_lstnew_bonus.c \
 			ft_lstadd_front_bonus.c \
 			ft_lstsize_bonus.c \
 			ft_lstlast_bonus.c \
@@ -111,7 +111,7 @@ $(NAME): $(OBJS)
 	@$(AR) $(NAME) $(OBJS)
 	@echo "\033[32mLibrary created: $(NAME)"
 
-bonus: fclean $(OBJS) $(BONUSO)
+bonus: $(OBJS) $(BONUSO)
 	@$(AR) $(NAME) $(OBJS) $(BONUSO)
 	@echo "$(_GREEN)Library created: $(_RED)$(NAME) $(_GREEN)($(_YELLOW)BONUS!$(_GREEN))$(_END)"
 
