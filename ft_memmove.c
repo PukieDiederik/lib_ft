@@ -6,16 +6,16 @@
 /*   By: drobert- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 14:26:04 by drobert-          #+#    #+#             */
-/*   Updated: 2022/02/16 14:36:57 by drobert-         ###   ########.fr       */
+/*   Updated: 2022/02/18 13:24:22 by drobert-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	int	i;
-	int	j;
 
 	i = len;
 	if (dst > src)
@@ -25,9 +25,9 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	else
 	{
-		j = -1;
-		while (++j <= i)
-			*((char *)dst + j) = *((char *)src + j);
+		i = -1;
+		while (++i < (int)len)
+			*((char *)dst + i) = *((char *)src + i);
 	}
 	return (dst);
 }

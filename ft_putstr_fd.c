@@ -6,7 +6,7 @@
 /*   By: drobert- <drobert-@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 23:09:41 by drobert-          #+#    #+#             */
-/*   Updated: 2022/02/17 23:10:29 by drobert-         ###   ########.fr       */
+/*   Updated: 2022/02/18 13:25:41 by drobert-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_putstr_fd(char *str, int fd)
 {
-	while(*str)
+	while (*str)
 		write(fd, str++, 1);
 }
