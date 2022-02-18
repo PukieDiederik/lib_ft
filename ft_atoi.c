@@ -6,7 +6,7 @@
 /*   By: drobert- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 17:28:20 by drobert-          #+#    #+#             */
-/*   Updated: 2022/02/14 17:38:21 by drobert-         ###   ########.fr       */
+/*   Updated: 2022/02/18 14:22:29 by drobert-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ int	ft_atoi(const char *str)
 		is_neg = -1;
 		str++;
 	}
+	else if (*str == '+')
+		str++;
 	while (*str >= '0' && *str <= '9')
 		num = (num * 10) + (*str++ - '0');
 	return (num * is_neg);
