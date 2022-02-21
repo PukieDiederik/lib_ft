@@ -6,7 +6,7 @@
 /*   By: drobert- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 13:44:57 by drobert-          #+#    #+#             */
-/*   Updated: 2022/02/18 15:21:03 by drobert-         ###   ########.fr       */
+/*   Updated: 2022/02/21 15:48:16 by drobert-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		dst[dst_len + n] = src[n];
 	if (dstsize <= dst_len)
 		return (src_len + dstsize);
+	dst[dst_len + n] = 0;
 	return (src_len + dst_len);
 }

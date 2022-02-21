@@ -6,7 +6,7 @@
 /*   By: drobert- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 14:26:04 by drobert-          #+#    #+#             */
-/*   Updated: 2022/02/18 13:24:22 by drobert-         ###   ########.fr       */
+/*   Updated: 2022/02/21 15:47:05 by drobert-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	int	i;
 
+	if (!dst && !src)
+		return (0);
 	i = len;
 	if (dst > src)
 	{
