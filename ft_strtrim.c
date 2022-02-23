@@ -6,7 +6,7 @@
 /*   By: drobert- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 10:58:04 by drobert-          #+#    #+#             */
-/*   Updated: 2022/02/18 13:57:54 by drobert-         ###   ########.fr       */
+/*   Updated: 2022/02/23 18:45:27 by drobert-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		end_size;
 	char	*str;
 
+	if (!s1)
+		return (0);
 	start_size = 0;
 	end_size = ft_strlen(s1) - 1;
 	while (is_in_set(set, *(s1 + start_size)))
