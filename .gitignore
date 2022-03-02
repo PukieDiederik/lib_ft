@@ -2,5 +2,6 @@
 *.o
 *.a
 
+libftTester/
 tests/
 TODO

@@ -6,7 +6,7 @@
 /*   By: drobert- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 12:35:28 by drobert-          #+#    #+#             */
-/*   Updated: 2022/02/18 14:20:49 by drobert-         ###   ########.fr       */
+/*   Updated: 2022/03/02 11:09:53 by drobert-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static int	count_words(const char *s, char c)
 }
 
 //this assumes that s does not start with a `c`
-char	*split_word(const char *s, char c)
+static char	*split_word(const char *s, char c)
 {
 	int		size;
 	char	*str;
@@ -51,6 +51,14 @@ char	*split_word(const char *s, char c)
 		*(str + i) = *(s + i);
 	*(str + i) = 0;
 	return (str);
+}
+
+static char	**clear(char **strs, int i)
+{
+	while (--i >= 0)
+		free(*(strs + i));
+	free(strs);
+	return (0);
 }
 
 char	**ft_split(char const *s, char c)
@@ -72,6 +80,8 @@ char	**ft_split(char const *s, char c)
 	while (++i < wc)
 	{
 		*(strs + i) = split_word(s, c);
+		if (*(strs + i) == 0)
+			return (clear(strs, i));
 		while (*s && *s != c)
 			s++;
 		while (*s && *s == c)
