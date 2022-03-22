@@ -6,7 +6,7 @@
 #    By: drobert- <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/16 11:40:26 by drobert-          #+#    #+#              #
-#    Updated: 2022/03/02 10:28:28 by drobert-         ###   ########.fr        #
+#    Updated: 2022/03/22 15:30:47 by drobert-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,6 +37,8 @@ _IBLUE		=	\x1b[44m
 _IPURPLE	=	\x1b[45m
 _ICYAN		=	\x1b[46m
 _IWHITE		=	\x1b[47m
+
+INCLUDES =	get_next_line.h libft.h
 
 # PROGRAMS
 CC =		cc
@@ -93,11 +95,16 @@ BONUS =		ft_lstnew_bonus.c \
 			ft_lstdelone_bonus.c \
 			ft_lstclear_bonus.c \
 			ft_lstiter_bonus.c \
-			ft_lstmap_bonus.c
+			ft_lstmap_bonus.c \
+			\
+			get_next_line.c \
+			get_next_line_utils.c \
 
 OBJS =		$(SRCS:.c=.o)
 
 BONUSO =	$(BONUS:.c=.o)
+
+
 #OTHER VARS
 NAME =		libft.a
 
