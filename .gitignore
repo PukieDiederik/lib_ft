@@ -1,7 +1,11 @@
-*.swp
+#Build files
 *.o
 *.a
 
+#Editor files
+.idea
+*.swp
+
+#Other
 libftTester/
 tests/
-TODO
