@@ -128,20 +128,22 @@ $(DIR_OBJ)/%.o: $(DIR_SRC)/*/%.c | $(DIR_OBJ)
 	@gcc $(CFLAGS) -c $(INCLUDE) $< -o $@
 
 $(DIR_OBJ) $(DIR_BUILD):
-	mkdir $@
+	@mkdir $@
 
 # FUNCTIONS
 $(NAME): $(OBJ_CORE)
 	@$(AR) $(NAME) $(OBJ_CORE)
-	@$(ECHO) "$(GREEN)Library created: $(RESET)$(NAME)"
+	@$(ECHO) "$(ORANGE)Library created: $(RESET)$(NAME)"
 
 $(DIR_BUILD)/list: $(OBJ_LIST) | $(DIR_BUILD) $(NAME)
 	@$(AR) $(NAME) $(OBJ_LIST)
-	touch $@
+	@touch $@
+	@$(ECHO) "$(ORANGE)Module Added: $(RESET)list"
 
 $(DIR_BUILD)/gnl: $(OBJ_GNL) | $(DIR_BUILD) $(NAME)
 	@$(AR) $(NAME) $(OBJ_GNL)
-	touch $@
+	@touch $@
+	@$(ECHO) "$(ORANGE)Module Added: $(RESET)gnl"
 
 # Will make basic libft
 core: $(NAME) $(OBJ_CORE)
