@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-#include <limits.h>
 
 int		assign_read(int *amount_read, char **read_buff, int fd);
 void	read_file(t_buffer **buff, int fd, int *i);

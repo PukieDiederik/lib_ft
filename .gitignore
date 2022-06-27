@@ -1,6 +1,7 @@
 #Build files
 *.o
 *.a
+.build
 
 #Editor files
 .idea

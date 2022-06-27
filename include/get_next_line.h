@@ -6,7 +6,7 @@
 /*   By: drobert- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 15:32:17 by drobert-          #+#    #+#             */
-/*   Updated: 2022/03/22 15:32:28 by drobert-         ###   ########.fr       */
+/*   Updated: 2022/06/27 12:05:42 by drobert-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <stdlib.h>
 
 # define BUFFER_SIZE 1024
+# define OPEN_MAX 1024
 
 //structs
 typedef struct s_buff
