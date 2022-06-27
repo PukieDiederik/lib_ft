@@ -11,34 +11,17 @@
 # **************************************************************************** #
 
 ## VARIABLES
+BLACK 					=	\033[0;30m
+RED						=	\033[0;31m
+GREEN					=	\033[0;32m
+ORANGE					=	\033[0;33m
+BLUE					=	\033[0;34m
+PURPLE					=	\033[0;35m
+CYAN					=	\033[0;36m
+GRAY					=	\033[0;37m
+WHITE					=	\033[0;38m
+RESET					=	\033[0m
 
-# This is a minimal set of ANSI/VT100 color codes
-_END		=	\x1b[0m
-_BOLD		=	\x1b[1m
-_UNDER		=	\x1b[4m
-_REV		=	\x1b[7m
-
-# Colors
-_GREY		=	\x1b[30m
-_RED		=	\x1b[31m
-_GREEN		=	\x1b[32m
-_YELLOW		=	\x1b[33m
-_BLUE		=	\x1b[34m
-_PURPLE		=	\x1b[35m
-_CYAN		=	\x1b[36m
-_WHITE		=	\x1b[37m
-
-# Inverted, i.e. colored backgrounds
-_IGREY		=	\x1b[40m
-_IRED		=	\x1b[41m
-_IGREEN		=	\x1b[42m
-_IYELLOW	=	\x1b[43m
-_IBLUE		=	\x1b[44m
-_IPURPLE	=	\x1b[45m
-_ICYAN		=	\x1b[46m
-_IWHITE		=	\x1b[47m
-
-INCLUDES =	get_next_line.h libft.h
 
 # PROGRAMS
 CC =		cc
@@ -49,8 +32,10 @@ RM =		rm -f
 
 AR =		ar -rc
 
+ECHO	= echo -e
+
 # FILES
-SRCS =		ft_atoi.c \
+SRCS_FILES	=	ft_atoi.c \
 			ft_bzero.c \
 			ft_isalnum.c \
 			ft_isalpha.c \
@@ -87,7 +72,7 @@ SRCS =		ft_atoi.c \
 			ft_putendl_fd.c \
 			ft_putnbr_fd.c
 
-BONUS =		ft_lstnew_bonus.c \
+BONUS	=	ft_lstnew_bonus.c \
 			ft_lstadd_front_bonus.c \
 			ft_lstsize_bonus.c \
 			ft_lstlast_bonus.c \
@@ -100,28 +85,50 @@ BONUS =		ft_lstnew_bonus.c \
 			get_next_line.c \
 			get_next_line_utils.c \
 
-OBJS =		$(SRCS:.c=.o)
 
-BONUSO =	$(BONUS:.c=.o)
+SRCS		=	$(addprefix $(DIR_SRC)/,$(SRCS_FILES))
+OBJS		=	$(addprefix $(DIR_OBJ)/,$(notdir $(SRCS:.c=.o)))
+
+
+
+# Directories
+DIR_OBJ		=	obj
+DIR_SRC		=	src
+DIR_INC		=	include
+
+INCLUDE	=	-I $(DIR_INC)
+
+BONUSO		=	$(BONUS:.c=.o)
 
 
 #OTHER VARS
 NAME =		libft.a
 
-.c.o:
-	@$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
-	
-# FUNCTIONS
 all: $(NAME)
 
+$(DIR_OBJ)/%.o: $(DIR_SRC)/%.c | $(DIR_OBJ)
+	@$(ECHO) "$(GREEN)>>>>> Compiling $(RESET)$(notdir $<)$(GREEN) -> $(RESET)$(notdir $@)$(RESET)"
+	@gcc $(CFLAGS) -c $(INCLUDE) $< -o $@
+
+$(DIR_OBJ)/%.o: $(DIR_SRC)/*/%.c | $(DIR_OBJ)
+	@$(ECHO) "$(GREEN)>>>>> Compiling $(RESET)$(notdir $<)$(GREEN) -> $(RESET)$(notdir $@)$(RESET)"
+	@gcc $(CFLAGS) -c $(INCLUDE) $< -o $@
+
+$(DIR_OBJ):
+	mkdir $(DIR_OBJ)
+
+#.c.o:
+#	@$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
+
+
+# FUNCTIONS
 $(NAME): $(OBJS)
 	@$(AR) $(NAME) $(OBJS)
-	@echo "\033[32mLibrary created: $(NAME)"
+	@$(ECHO) "$(GREEN)Library created: $(RESET)$(NAME)"
 
 bonus: $(OBJS) $(BONUSO)
 	@$(AR) $(NAME) $(OBJS) $(BONUSO)
-	@echo "$(_GREEN)Library created: $(_RED)$(NAME) $(_GREEN)($(_YELLOW)BONUS!$(_GREEN))$(_END)"
-
+	@$(ECHO) "$(_GREEN)Library created: $(_RED)$(NAME) $(_GREEN)($(_YELLOW)BONUS!$(_GREEN))$(_END)"
 
 clean:
 	@$(RM) $(OBJS) $(BONUSO)
