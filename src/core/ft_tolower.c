@@ -10,6 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* ft_tolower
+ * Converts a character to lowercase
+ *
+ * c - The character to convert
+ */
 int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')

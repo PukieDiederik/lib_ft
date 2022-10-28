@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/* ft_strnstr
+ * Tries to find needle in haystack and if found returns the pointer
+ *
+ * haystack - String to check in
+ * needle - String to check for
+ * n - Max amount of characters to check for in haystack
+ */
 char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 {
 	unsigned int	i;

@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/* ft_strlcat
+ * concatinates src to the end of dst with a max size
+ *
+ * dst - the destination (Should have enough space to fit src)
+ * src - The source
+ * dstsize - size of dst
+ */
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	dst_len;

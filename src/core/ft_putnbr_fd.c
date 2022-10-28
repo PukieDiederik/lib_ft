@@ -11,8 +11,13 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
+/* ft_putnbr_fd
+ * writes a number to fd
+ *
+ * n - number to write
+ * fd - The fd to write to
+ */
 void	ft_putnbr_fd(int n, int fd)
 {
 	long	divider;

@@ -10,6 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* ft_strchr
+ * Finds a char in a string and returns the pointer that that char
+ *
+ * s - The string to check
+ * c - The char to check for
+ */
 char	*ft_strchr(const char *s, int c)
 {
 	while (*s && *s != (char)c)

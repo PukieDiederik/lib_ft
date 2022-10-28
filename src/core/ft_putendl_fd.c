@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/* ft_putendl_fd
+ * writes a string with a newline into fd
+ *
+ * str - the string to write
+ * fd - The fd to write to
+ */
 void	ft_putendl_fd(char *str, int fd)
 {
 	ft_putstr_fd(str, fd);

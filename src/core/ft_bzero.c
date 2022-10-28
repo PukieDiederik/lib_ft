@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/* ft_bzero
+ * Sets memory to 0's
+ *
+ * s - The point from where to start
+ * n - The amount of bytes to set to 0
+ */
 void	ft_bzero(void *s, size_t n)
 {
 	while (n-- > 0)

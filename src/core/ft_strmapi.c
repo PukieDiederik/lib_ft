@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/* ft_strmapi
+ * Copies S and applies f to all characters
+ *
+ * str - string to copy
+ * f - The function to apply to the string
+ */
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	len;

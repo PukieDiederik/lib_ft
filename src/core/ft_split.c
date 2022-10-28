@@ -61,6 +61,12 @@ static char	**clear(char **strs, int i)
 	return (0);
 }
 
+/* ft_split
+ * Splits a string based on a char and returns a string array
+ *
+ * s - String to split
+ * c - The char to split on
+ */
 char	**ft_split(char const *s, char c)
 {
 	int		wc;

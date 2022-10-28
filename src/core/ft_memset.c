@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/* ft_memset
+ * Fills a memory with a certain byte
+ *
+ * b - The start adress
+ * c - the byte to be copied into b
+ * len - the amount of times its copied
+ */
 void	*ft_memset(void *b, int c, size_t len)
 {
 	unsigned char	fill;

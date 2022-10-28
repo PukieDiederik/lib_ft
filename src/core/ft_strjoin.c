@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/* ft_strjoin
+ * concats 2 strings
+ *
+ * s1, s2 - The strings to join
+ */
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	unsigned int	size;

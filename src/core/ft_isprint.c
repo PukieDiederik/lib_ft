@@ -10,9 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* ft_isprint
+ * Checks if a char is printable
+ *
+ * c - The char to check
+ */
 int	ft_isprint(int c)
 {
-	if (c >= ' ' && c <= '~')
-		return (1);
-	return (0);
+	return (c >= ' ' && c <= '~');
 }

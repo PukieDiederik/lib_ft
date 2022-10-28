@@ -13,6 +13,13 @@
 #include "libft.h"
 #include <stdio.h>
 
+/* ft_memcpy
+ * Copies over memory from src to dst
+ *
+ * dst - The adress where memory is copied to
+ * src - The adress where memory is copied from
+ * n - The amount of memory to copy
+ */
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	int		i;

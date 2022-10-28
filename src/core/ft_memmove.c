@@ -13,6 +13,13 @@
 #include "libft.h"
 #include <stdio.h>
 
+/* ft_memmove
+ * Copies memory but takes into account overlapping pieces of memory
+ *
+ * dst - The destination adress
+ * src - The source adress
+ * len - The amount of memory to copy
+ */
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	int	i;

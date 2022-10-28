@@ -21,6 +21,12 @@ static int	is_in_set(const char *set, const char c)
 	return (0);
 }
 
+/* ft_strtrim
+ * Removes characters which are in set from the start and end of s1
+ *
+ * s1 - The string to trim
+ * set - The character set to remove
+ */
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		start_size;

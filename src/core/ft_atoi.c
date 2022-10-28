@@ -10,6 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* ft_atoi
+ * Converts a string into an int
+ *
+ * str - The string to convert into an int
+ */
 int	ft_atoi(const char *str)
 {
 	long	num;

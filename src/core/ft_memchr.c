@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/* ft_memchr
+ * Looks for a byte in a section of memory and if found returns it's pointer
+ *
+ * s - The memory to check
+ * c - the byte to check
+ * n - Max length to check
+ */
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	int	i;

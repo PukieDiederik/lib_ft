@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/* ft_substr
+ * Creates a new string from a piece of s
+ *
+ * s - The string to cut
+ * start - From where to cut
+ * len - How much to cut
+ */
 char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
 	int		i;

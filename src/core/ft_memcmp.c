@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/* ft_memcmp
+ * Compares 2 pieces of memory
+ *
+ * s1, s2 - Memory to check
+ * n - Max length to check
+ */
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	int				i;

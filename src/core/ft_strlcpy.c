@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/* ft_strlcpy
+ * writes a string with a newline into fd
+ *
+ * str - The source to copy from
+ * dst - the destination to copy to
+ * dst_size - max size of dst
+ */
 size_t	ft_strlcpy(char *dst, const char *src, size_t dst_size)
 {
 	unsigned int	n;

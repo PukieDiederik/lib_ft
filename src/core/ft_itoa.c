@@ -40,6 +40,11 @@ static int	calc_num_l(long n)
 	return (length);
 }
 
+/* ft_itoa
+ * Converts an into to a string
+ *
+ * n - the int to convert
+ */
 char	*ft_itoa(int n)
 {
 	long	num;

@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/* ft_strdup
+ * Mallocs and copies a string
+ *
+ * s1 - the string to duplicate
+ */
 char	*ft_strdup(const char *s1)
 {
 	int		len;

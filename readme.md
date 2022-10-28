@@ -50,7 +50,7 @@ The following functions work the same as in libc (without the `ft_` prefix)
 , applies the function to each character in a copy of the string
 - ft_striteri // Takes a string and a function (which takes a char), applies the function to each char
 
-
+- ft_putchar_fd // writes a char to a fd
 - ft_putstr_fd // writes a string to a fd
 - ft_putendl_fd // writes a string to a fd, and adds a newline
 - ft_putnbr_fd // writes a number to a fd

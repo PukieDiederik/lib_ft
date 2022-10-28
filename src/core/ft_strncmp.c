@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/* ft_strncmp
+ * Compares to strings, returns 0 if equal
+ *
+ * s1, s2 - Strings to compare
+ * n - max amount to check
+ */
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	unsigned int	i;

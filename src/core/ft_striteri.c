@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/* ft_striteri
+ * Applies a function to each char of a string
+ *
+ * s - The string to apply the function to
+ * f - The function to apply
+ */
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	len;

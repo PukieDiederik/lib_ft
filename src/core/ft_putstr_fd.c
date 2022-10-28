@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/* ft_putstr_fd
+ * writes a string into fd
+ *
+ * str - the string to write
+ * fd - The fd to write to
+ */
 void	ft_putstr_fd(char *str, int fd)
 {
 	if (str)

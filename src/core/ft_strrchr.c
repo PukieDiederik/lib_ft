@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/* ft_strrchr
+ * Checks for a character in string end to start
+ *
+ * s - String to check
+ * c - character to check for
+ */
 char	*ft_strrchr(const char *s, int c)
 {
 	int	i;

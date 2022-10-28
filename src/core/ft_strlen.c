@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/* ft_strlen
+ * Gets the length of a string
+ *
+ * str - the string to check
+ */
 size_t	ft_strlen(const char *str)
 {
 	int	c;

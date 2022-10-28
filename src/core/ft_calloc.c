@@ -10,14 +10,23 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <limits.h>
 #include "libft.h"
 
+/* ft_calloc
+ * Allocates memory and sets it to 0
+ *
+ * count - the amount of 'elements to allocate
+ * size - the size of an 'element
+ */
 void	*ft_calloc(size_t count, size_t size)
 {
-	int		s;
-	char	*ptr;
+	unsigned long long	s;
+	char			*ptr;
 
 	s = count * size;
+	if (s != 0 && s / size != count)
+		return (0);
 	ptr = (char *)malloc(s);
 	if (ptr == 0)
 		return (0);
