@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/* ft_lstadd_front
+ * Adds a node to the front of a list
+ *
+ * lst - The list to add it to, will change lst to new
+ * new - The new node to add
+ */
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	new->next = *lst;

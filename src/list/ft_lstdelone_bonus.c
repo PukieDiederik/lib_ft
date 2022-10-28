@@ -10,6 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* ft_lstdelone
+ * Deletes a node
+ *
+ * lst - the node to delete
+ * del - the function to delete the content of a node
+ */
 #include "libft.h"
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))

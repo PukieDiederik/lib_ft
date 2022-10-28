@@ -12,7 +12,13 @@
 
 #include "libft.h"
 
-//Yes, I know, del is useless but I had to use it because compiler flags
+/* ft_lstmap
+ * Copies the list and applies a function to this copy
+ *
+ * lst - The list
+ * f - the function to apply
+ * del - A function to delete the content of nodes (in case of malloc error)
+ */
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*start;

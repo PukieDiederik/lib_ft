@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/* ft_lstiter
+ * Applies a function to the entire list
+ *
+ * lst - The list
+ * del - the function to be applied
+ */
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	while (lst)

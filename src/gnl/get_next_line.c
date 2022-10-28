@@ -106,6 +106,11 @@ char	*get_line(t_buffer *buff, int fd)
 	return (str);
 }
 
+/* get_next_line
+ * Gets the next line of a fd
+ *
+ * fd - The fd from which to read
+ */
 char	*get_next_line(int fd)
 {
 	static t_buffer	buff_arr[OPEN_MAX] = {{0}};

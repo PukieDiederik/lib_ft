@@ -22,7 +22,7 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	unsigned long long	s;
-	char			*ptr;
+	char				*ptr;
 
 	s = count * size;
 	if (s != 0 && s / size != count)
